@@ -36,7 +36,7 @@ function Contact() {
                             <textarea id={"message"} placeholder={"Enter Your Message"} value={message} onChange={(e) => setMessage(e.target.value)} autoComplete={"off"}/>
                         </div>
 
-                        <button style={{margin: 0}} className={"Button"} type="submit">Gönder</button>
+                        <button style={{margin: 0}} className={"Button"} type="submit">SEND</button>
                     </form>
                 </div>
             </section>
