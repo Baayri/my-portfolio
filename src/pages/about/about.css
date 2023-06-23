@@ -1,0 +1,16 @@
+.AboutGrid{
+    width: 75%;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    justify-items: start;
+    align-items: center;
+}
+
+.AboutGrid img{
+    align-self: center;
+    justify-self: center;
+    max-width: 80%;
+    max-height: 80%;
+    box-shadow: 15px 15px 100px 30px rgba(255,255,255,0.2);
+    border: 7px solid var(--color2);
+}
