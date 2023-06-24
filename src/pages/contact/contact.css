@@ -1,4 +1,9 @@
-.contactForm {
+.contactForm{
+    position: relative;
+    z-index: 1;
+}
+
+.contactForm form{
     background: rgba(232,226,226,.05);
     box-shadow: 0 0 30px rgba(0,0,0,0.25);
     backdrop-filter: blur(10px);
@@ -6,15 +11,12 @@
     height: 60vh;
     border-radius: 3vh;
     padding: 30px;
-}
-
-.contactForm form{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
     font-family: "Jost", sans-serif;
+    z-index: 1;
 }
 
 .FormItem{
@@ -38,7 +40,8 @@
     font-weight: 300;
     background: transparent;
     backdrop-filter: blur(10px);
-    border: 1px solid var(--color4);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 1vh;
     color: white;
     outline: none;
     padding: 10px;
@@ -47,6 +50,89 @@
 .FormItem textarea{
     resize: none;
     height: 10vh;
+}
+
+.Circle{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background: rgba(0,255,0,0.8);
+    border-radius: 100%;
+    z-index: -1;
+}
+
+.Circle:nth-child(2){
+    bottom: -5vh;
+    right: -4vh;
+    animation: move-up 20s linear infinite;
+}
+
+@keyframes move-up {
+    0%{
+        bottom: -4vh;
+        right: -4vh;
+    }
+    25%{
+        bottom: 59vh;
+        right: -4vh;
+    }
+    50%{
+        bottom: 59vh;
+        right: 49vh;
+    }
+    75%{
+        bottom: -4vh;
+        right: 49vh;
+    }
+    100%{
+        bottom: -4vh;
+        right: -4vh;
+    }
+}
+
+.Circle:nth-child(3){
+    top: -5vh;
+    left: -4vh;
+    animation: move-down 20s linear infinite;
+}
+
+@keyframes move-down {
+    0%{
+        top: -4vh;
+        left: -4vh;
+    }
+    25%{
+        top: 59vh;
+        left: -4vh;
+    }
+    50%{
+        top: 59vh;
+        left: 49vh;
+    }
+    75%{
+        top: -4vh;
+        left: 49vh;
+    }
+    100%{
+        top: -4vh;
+        left: -4vh;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .contactForm form{
+        width: 30vh;
+    }
+
+    .FormItem input,textarea {
+        width: 25vh;
+        height: 3vh;
+    }
+
+    .Circle{
+        display: none;
+    }
 }
 
 

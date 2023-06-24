@@ -19,6 +19,7 @@ function App() {
             appRef.current.style.setProperty("--y",`${pageY}px`)
         }
         window.addEventListener('mousemove', updateMousePosition)
+
         return ()=> {
             window.removeEventListener('mousemove', updateMousePosition)
         }

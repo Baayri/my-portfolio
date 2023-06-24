@@ -36,3 +36,32 @@
     color: var(--color3);
     transform: translateY(-5px);
 }
+
+.Mobile{
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .NavItem{
+        display: none;
+    }
+
+    .Mobile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .Mobile button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 9vh;
+        height: 9vh;
+        border: none;
+        background: transparent;
+        border-radius: 1vh;
+        margin-inline: 15px;
+    }
+}

@@ -20,7 +20,6 @@ function Contact() {
 
                 <div className={"contactForm"}>
                     <form onSubmit={handleSubmit}>
-
                         <div className={"FormItem"}>
                             <label htmlFor="name">Name</label>
                             <input id={"name"} type="text" placeholder={"Enter Your Name"} value={name} onChange={(e) => setName(e.target.value)} autoComplete={"off"}/>
@@ -38,6 +37,9 @@ function Contact() {
 
                         <button style={{margin: 0}} className={"Button"} type="submit">SEND</button>
                     </form>
+
+                    <div className={"Circle"}></div>
+                    <div className={"Circle"}></div>
                 </div>
             </section>
         </div>
