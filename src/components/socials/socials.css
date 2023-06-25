@@ -6,8 +6,8 @@
     right: inherit;
     transform: translate(0, -50%);
     background-color: var(--color4);
-    width: 8vh;
-    height: 30%;
+    width: 70px;
+    height: 250px;
     border-radius: 0 1vh 1vh 0;
     box-shadow: 0 0 30px 1px rgba(255,255,255,0.5);
     display: flex;
@@ -20,8 +20,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 6.5vh;
-    height: 6.5vh;
+    width: 60px;
+    height: 60px;
     border: none;
     border-radius: 1vh;
     background-color: transparent;

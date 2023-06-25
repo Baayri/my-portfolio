@@ -14,14 +14,24 @@ function App() {
     useEffect(()=>{
         const updateMousePosition = (event) => {
             if (!appRef.current) return;
+            if (appRef.current.offsetWidth <= 768 ) return;
             const {pageX, pageY} = event
             appRef.current.style.setProperty("--x",`${pageX}px`)
             appRef.current.style.setProperty("--y",`${pageY}px`)
         }
+
+        function handleScroll() {
+            if (appRef.current.offsetWidth > 768 ) return;
+            const scrollY = window.scrollY;
+            appRef.current.style.setProperty("--x",`${100}px`)
+            appRef.current.style.setProperty("--y",`${scrollY + 100}px`)
+        }
         window.addEventListener('mousemove', updateMousePosition)
+        window.addEventListener('scroll', handleScroll)
 
         return ()=> {
             window.removeEventListener('mousemove', updateMousePosition)
+            window.removeEventListener('scroll', handleScroll)
         }
 
     },[])

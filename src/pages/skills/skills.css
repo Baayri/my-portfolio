@@ -39,8 +39,27 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 425px) {
     .SkillsGrid{
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .Skills span{
+        display: none;
+    }
+
+    .Skills{
+        width: 50px;
+        height: 50px;
+        border: 3px solid var(--color4);
+        border-radius: 1vh;
+        transition: transform 300ms ease-in-out;
+    }
+
+}
+
+@media (hover: none) {
+    .Skills:hover {
+        transform: none;
     }
 }

@@ -8,9 +8,9 @@ function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setName('');
-        setEmail('');
-        setMessage('');
+        const subject = `Contact Form - ${name}`;
+        const body = `Name : ${name}\n\nEmail : ${email}\n\nMessage : ${message}`;
+        window.location.href = `mailto:m.saidbayri@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     };
 
     return (

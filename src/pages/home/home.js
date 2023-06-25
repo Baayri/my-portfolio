@@ -1,7 +1,13 @@
 import React from 'react';
 import './home.css'
+import CV from '../../assets/pdf/MuhammedSaidBayriCV.pdf'
 
 function Home() {
+
+    const openPDF = () => {
+        window.open(CV, '_blank');
+    }
+
     return (
         <div>
             <section id={"home"} className={"Content"}>
@@ -9,7 +15,7 @@ function Home() {
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi delectus ex inventore libero
                     molestias neque quae! Adipisci cumque deleniti dolore eveniet expedita laudantium numquam omnis!
                     Doloribus eveniet iure provident quisquam!</p>
-                <button className={"Button"}>Resume</button>
+                <button onClick={openPDF} className={"Button"}>Resume</button>
             </section>
         </div>
     );
