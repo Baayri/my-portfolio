@@ -35,4 +35,8 @@
     .Content h1{
         font-size: 5vh;
     }
+
+    .App{
+        background: radial-gradient(500px circle at var(--x) var(--y), var(--color2) 0%, transparent 90%);
+    }
 }
